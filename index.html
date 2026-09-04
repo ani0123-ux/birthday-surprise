@@ -241,7 +241,7 @@
 
 <body>
 <audio id="birthdayMusic" loop>
-    <source src="music/love.mp3" type="audio/mpeg">
+    <source src="./music/love.mp3" type="audio/mpeg">
 </audio>
 <div class="page">
     <div class="box">
@@ -396,23 +396,19 @@ DUDU ❤️
 
 <script>
 
-    function openSurprise() {
-      
-document.getElementById("birthdayMusic").play();
+function openSurprise() {
+    const music = document.getElementById("birthdayMusic");
 
-        document.getElementById("birthday").scrollIntoView({
-            behavior: "smooth"
-        });
+    music.volume = 1.0;
 
-    }
+    music.play().catch(function(error) {
+        console.log("Music error:", error);
+    });
 
-
-    function loveMessage() {
-
-        document.getElementById("message").innerHTML =
-            "You are one of the best things that ever happened to me. ❤️";
-
-    }
+    document.getElementById("birthday").scrollIntoView({
+        behavior: "smooth"
+    });
+}
 
 
 function celebrate() {
