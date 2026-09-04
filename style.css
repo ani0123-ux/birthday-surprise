@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff0f5;
+    color: #333;
+}
+
+
+/* ---------------- WELCOME ---------------- */
+
+.welcome {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+}
+
+.welcome-content {
+    padding: 30px;
+}
+
+.heart {
+    font-size: 80px;
+    animation: heartbeat 1.2s infinite;
+}
+
+.welcome h1 {
+    font-size: 45px;
+    margin: 20px 0;
+}
+
+.welcome p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+button {
+    border: none;
+    padding: 15px 28px;
+    border-radius: 30px;
+
+    background: white;
+    color: #ff4f81;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+
+/* ---------------- BIRTHDAY ---------------- */
+
+.birthday {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+    background: #fff;
+}
+
+.birthday-content {
+    max-width: 700px;
+}
+
+.small-text {
+    color: #ff5c8a;
+    font-size: 18px;
+}
+
+.birthday h1 {
+    font-size: 60px;
+    color: #ff477e;
+
+    margin: 20px 0;
+}
+
+.birthday h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.message {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+#secret-message {
+    margin-top: 25px;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    color: #ff477e;
+}
+
+
+/* ---------------- MEMORIES ---------------- */
+
+.memories {
+    min-height: 100vh;
+
+    padding: 80px 30px;
+
+    text-align: center;
+
+    background: #ffe4ec;
+}
+
+.memories h1 {
+    font-size: 42px;
+    color: #ff477e;
+}
+
+.memories > p {
+    margin: 15px 0 40px;
+    font-size: 18px;
+}
+
+.photo-container {
+    display: flex;
+
+    justify-content: center;
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+.photo-card {
+    width: 280px;
+
+    background: white;
+
+    padding: 15px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+
+    transition: 0.3s;
+}
+
+.photo-card:hover {
+    transform: translateY(-10px) rotate(1deg);
+}
+
+.photo-placeholder {
+    height: 280px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #ffd1df;
+
+    border-radius: 15px;
+
+    font-size: 60px;
+}
+
+.photo-card h3 {
+    margin-top: 15px;
+
+    color: #ff477e;
+}
+
+
+/* ---------------- LETTER ---------------- */
+
+.letter {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+
+    background: #fff;
+}
+
+.letter-box {
+    max-width: 750px;
+
+    padding: 50px;
+
+    background: #fff8fa;
+
+    border-radius: 25px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+
+    text-align: center;
+}
+
+.letter-box h1 {
+    color: #ff477e;
+
+    margin-bottom: 30px;
+}
+
+.letter-box p {
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    margin: 18px 0;
+}
+
+.letter-box h2 {
+    color: #ff477e;
+
+    margin-top: 30px;
+}
+
+
+/* ---------------- FINAL ---------------- */
+
+.final {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+
+    color: white;
+}
+
+.cake {
+    font-size: 100px;
+
+    animation: floating 2s infinite;
+}
+
+.final h1 {
+    font-size: 55px;
+
+    margin: 20px 0;
+}
+
+.final p {
+    font-size: 20px;
+
+    margin-bottom: 30px;
+}
+
+.hearts {
+    font-size: 30px;
+
+    margin: 25px;
+}
+
+
+/* ---------------- ANIMATIONS ---------------- */
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 600px) {
+
+    .welcome h1 {
+        font-size: 32px;
+    }
+
+    .birthday h1 {
+        font-size: 42px;
+    }
+
+    .birthday h2 {
+        font-size: 26px;
+    }
+
+    .message {
+        font-size: 17px;
+    }
+
+    .memories h1 {
+        font-size: 32px;
+    }
+
+    .letter-box {
+        padding: 30px 20px;
+    }
+
+    .final h1 {
+        font-size: 40px;
+    }
+
+}
